@@ -37,6 +37,7 @@ qt_add_qml_module(appCachyOsHello
         img/cachyos-pi.png
 
     RESOURCES
+        README.md # to show in Qt Creator
         pages/en/involved.html
         pages/en/readme.html
         pages/en/release.html

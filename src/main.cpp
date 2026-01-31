@@ -7,7 +7,6 @@
 #include "cachyospirunner.h"
 #include "cachyoskmrunner.h"
 #include "fileloader.h"
-#include "terminallauncher.h"
 
 int main(int argc, char *argv[])
 {
