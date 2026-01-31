@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/components/GetInvolvedDialog.qml" line="6"/>
         <source>Get involved</source>
-        <translation type="unfinished"></translation>
+        <translation>Присоединиться</translation>
     </message>
 </context>
 <context>
@@ -19,12 +19,12 @@
     <message>
         <location filename="../qml/pages/InstallAppsPage.qml" line="18"/>
         <source>You can easily install new apps!</source>
-        <translation>Вы легко можете установить новые программы!</translation>
+        <translation>Вы можете легко устанавливать новые приложения!</translation>
     </message>
     <message>
         <location filename="../qml/pages/InstallAppsPage.qml" line="24"/>
         <source>Install the most popular apps using our CachyOS Package Installer. Press a button below to open it!</source>
-        <translation>Установите самые популярные приложения используя установщик пакетов CachyOS. Нажмите на кнопку снизу, чтобы открыть его!</translation>
+        <translation>Установите самые популярные приложения с помощью установщика пакетов CachyOS. Нажмите кнопку ниже, чтобы открыть его!</translation>
     </message>
     <message>
         <location filename="../qml/pages/InstallAppsPage.qml" line="40"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../qml/pages/KernelManagerPage.qml" line="8"/>
         <source>Manage kernels</source>
-        <translation>Управляйте ядрами</translation>
+        <translation>Управление ядрами</translation>
     </message>
     <message>
         <location filename="../qml/pages/KernelManagerPage.qml" line="18"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../qml/pages/KernelManagerPage.qml" line="24"/>
         <source>There&apos;re a lot of kernels in the CachyOS Kernel Manager. Choose one, no, two, no, how many you want and rock with &apos;em!</source>
-        <translation>В менеджере ядер CachyOS находится очень много ядер на выбор. Выберите одно, нет, два, нет, сколько угодно и катайте с ними!</translation>
+        <translation>В менеджере ядер CachyOS доступно множество ядер. Выберите одно, нет, два, нет, сколько угодно и пользуйтесь ими!</translation>
     </message>
     <message>
         <location filename="../qml/pages/KernelManagerPage.qml" line="41"/>
@@ -80,87 +80,87 @@
     <message>
         <location filename="../qml/pages/LinksPage.qml" line="9"/>
         <source>Links</source>
-        <translation type="unfinished"></translation>
+        <translation>Ссылки</translation>
     </message>
     <message>
         <location filename="../qml/pages/LinksPage.qml" line="44"/>
         <source>Any questions?</source>
-        <translation type="unfinished"></translation>
+        <translation>Есть вопросы?</translation>
     </message>
     <message>
         <location filename="../qml/pages/LinksPage.qml" line="50"/>
         <source>You can find the answers to your questions down here:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можете найти ответы на свои вопросы здесь:</translation>
     </message>
     <message>
         <location filename="../qml/pages/LinksPage.qml" line="67"/>
         <source>Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="79"/>
+        <location filename="../qml/pages/LinksPage.qml" line="78"/>
         <source>Read me</source>
-        <translation type="unfinished"></translation>
+        <translation>Прочти меня</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="84"/>
+        <location filename="../qml/pages/LinksPage.qml" line="83"/>
         <source>Release info</source>
-        <translation type="unfinished"></translation>
+        <translation>Информация о релизе</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="89"/>
+        <location filename="../qml/pages/LinksPage.qml" line="88"/>
         <source>Wiki</source>
-        <translation type="unfinished"></translation>
+        <translation>Вики</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="112"/>
+        <location filename="../qml/pages/LinksPage.qml" line="111"/>
         <source>Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Поддержка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="124"/>
+        <location filename="../qml/pages/LinksPage.qml" line="122"/>
         <source>Forum</source>
-        <translation type="unfinished"></translation>
+        <translation>Форум</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="129"/>
+        <location filename="../qml/pages/LinksPage.qml" line="127"/>
         <source>Software</source>
-        <translation type="unfinished"></translation>
+        <translation>Программное обеспечение</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="153"/>
+        <location filename="../qml/pages/LinksPage.qml" line="151"/>
         <source>Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Проект</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="165"/>
+        <location filename="../qml/pages/LinksPage.qml" line="162"/>
         <source>Get involved</source>
-        <translation type="unfinished"></translation>
+        <translation>Присоединиться</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="170"/>
+        <location filename="../qml/pages/LinksPage.qml" line="167"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Разработка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="175"/>
+        <location filename="../qml/pages/LinksPage.qml" line="172"/>
         <source>Donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожертвовать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="194"/>
+        <location filename="../qml/pages/LinksPage.qml" line="191"/>
         <source>Go to tweaks and fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Перейти к настройкам и исправлениям</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="207"/>
+        <location filename="../qml/pages/LinksPage.qml" line="204"/>
         <source>Back</source>
-        <translation type="unfinished">Назад</translation>
+        <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="216"/>
+        <location filename="../qml/pages/LinksPage.qml" line="213"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -169,26 +169,6 @@
         <location filename="../qml/Main.qml" line="16"/>
         <source>CachyOS Hello</source>
         <translation>CachyOS Hello</translation>
-    </message>
-    <message>
-        <source>Welcome to CachyOS!</source>
-        <translation type="obsolete">Добро пожаловать в CachyOS!</translation>
-    </message>
-    <message>
-        <source>Thank you for joining our community!</source>
-        <translation type="obsolete">Спасибо за то, что вступили в наше сообщество!</translation>
-    </message>
-    <message>
-        <source>We, the CachyOS Developers, hope that you will enjoy using CachyOS as much as we enjoy building it. Press &quot;Next&quot; to get you started with your new operating system. So enjoy the experience, and don&apos;t hesitate to send us your feedback.</source>
-        <translation type="obsolete">Мы, разработчики CachyOS, надеемся, что вам понравится использовать CachyOS так же, как нам нравится её делать. Нажмите &quot;Далее&quot;, чтобы начать работу с новой операционной системой. Наслаждайтесь опытом и не стесняйтесь присылать нам свои отзывы.</translation>
-    </message>
-    <message>
-        <source>Quit</source>
-        <translation type="obsolete">Выход</translation>
-    </message>
-    <message>
-        <source>Next</source>
-        <translation type="obsolete">Далее</translation>
     </message>
 </context>
 <context>
@@ -206,17 +186,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="27"/>
         <source>Thank you for joining our community!</source>
-        <translation>Спасибо за то, что вступили в наше сообщество!</translation>
+        <translation>Спасибо, что присоединились к нашему сообществу!</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="33"/>
         <source>We, the CachyOS Developers, hope that you will enjoy using CachyOS as much as we enjoy building it. Press &quot;Next&quot; to get you started with your new operating system. So enjoy the experience, and don&apos;t hesitate to send us your feedback.</source>
-        <translation>Мы, разработчики CachyOS, надеемся, что вам понравится использовать CachyOS так же, как нам нравится её делать. Нажмите &quot;Далее&quot;, чтобы начать работу с новой операционной системой. Наслаждайтесь опытом и не стесняйтесь присылать нам свои отзывы.</translation>
+        <translation>Мы, разработчики CachyOS, надеемся, что вам понравится использовать CachyOS так же, как нам нравится его создавать. Нажмите &quot;Далее&quot;, чтобы начать работу с вашей новой операционной системой. Приятного использования, и не стесняйтесь отправлять нам свои отзывы.</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="97"/>
         <source>Quit</source>
-        <translation>Выход</translation>
+        <translation>Выйти</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="105"/>
@@ -229,7 +209,7 @@
     <message>
         <location filename="../qml/components/ReadmeDialog.qml" line="6"/>
         <source>Read me</source>
-        <translation type="unfinished"></translation>
+        <translation>Прочти меня</translation>
     </message>
 </context>
 <context>
@@ -237,7 +217,7 @@
     <message>
         <location filename="../qml/components/ReleaseInfoDialog.qml" line="6"/>
         <source>Release info</source>
-        <translation type="unfinished"></translation>
+        <translation>Информация о релизе</translation>
     </message>
 </context>
 <context>
@@ -273,12 +253,12 @@
     <message>
         <location filename="../qml/pages/TweaksAndFixesPage.qml" line="43"/>
         <source>Use RAM for browser profiles</source>
-        <translation>Использовать ОЗУ для профилей браузеров</translation>
+        <translation>Использовать ОЗУ для профилей браузера</translation>
     </message>
     <message>
         <location filename="../qml/pages/TweaksAndFixesPage.qml" line="47"/>
         <source>Auto-adjust process priorities for better system responsiveness</source>
-        <translation>Автонастройка приоритетов процессов для лучшей отзывчивости системы</translation>
+        <translation>Автоматически настраивать приоритеты процессов для лучшей отзывчивости системы</translation>
     </message>
     <message>
         <location filename="../qml/pages/TweaksAndFixesPage.qml" line="51"/>
@@ -288,12 +268,12 @@
     <message>
         <location filename="../qml/pages/TweaksAndFixesPage.qml" line="55"/>
         <source>Proactively kill processes during low memory to prevent freezes</source>
-        <translation>Агрессивное завершение процессов при нехватке памяти, чтобы предотвратить зависание системы</translation>
+        <translation>Принудительно завершать процессы при нехватке памяти для предотвращения зависаний</translation>
     </message>
     <message>
         <location filename="../qml/pages/TweaksAndFixesPage.qml" line="59"/>
         <source>Automatically tune system network using Bfptune</source>
-        <translation>Автоматическая настройка системной сети с помощью Bfptune</translation>
+        <translation>Автоматически настраивать сеть с помощью Bfptune</translation>
     </message>
     <message>
         <location filename="../qml/pages/TweaksAndFixesPage.qml" line="63"/>
@@ -311,67 +291,67 @@
         <translation>Управление пакетами</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="96"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="95"/>
         <source>System update</source>
-        <translation>Обновить систему</translation>
+        <translation>Обновление системы</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="100"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="99"/>
         <source>Reinstall all packages</source>
         <translation>Переустановить все пакеты</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="104"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="103"/>
         <source>Reset keyrings</source>
-        <translation>Сброс ключей</translation>
+        <translation>Сбросить связки ключей</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="116"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="115"/>
         <source>Remove database lock</source>
-        <translation>Снять блокировку базы данных</translation>
+        <translation>Удалить блокировку базы данных</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="120"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="119"/>
         <source>Clear package cache</source>
-        <translation>Очистить пакетный кэш</translation>
+        <translation>Очистить кэш пакетов</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="124"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="123"/>
         <source>Remove orphans</source>
-        <translation>Удалить &quot;сирот&quot;</translation>
+        <translation>Удалить осиротевшие пакеты</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="146"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="145"/>
         <source>Networking</source>
         <translation>Сеть</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="158"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="156"/>
         <source>Rank mirrors</source>
         <translation>Ранжировать зеркала</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="162"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="160"/>
         <source>Change DNS server</source>
-        <translation>Сменить сервер DNS</translation>
+        <translation>Изменить DNS-сервер</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="184"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="182"/>
         <source>Additional</source>
         <translation>Дополнительно</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="196"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="193"/>
         <source>Install Gaming packages</source>
-        <translation>Установить пакеты для гейминга</translation>
+        <translation>Установить игровые пакеты</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="200"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="197"/>
         <source>Open KWin Debug window</source>
         <translation>Открыть окно отладки KWin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="224"/>
+        <location filename="../qml/pages/TweaksAndFixesPage.qml" line="221"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
