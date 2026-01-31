@@ -6,6 +6,8 @@
 #include "commandrunner.h"
 #include "cachyospirunner.h"
 #include "cachyoskmrunner.h"
+#include "fileloader.h"
+#include "terminallauncher.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,11 +19,15 @@ int main(int argc, char *argv[])
     CommandRunner cmdRunner(&app);
     CachyosPiRunner piRunner(&app);
     CachyosKmRunner kmRunner(&app);
+    FileLoader fileLoader(&app);
 
-    engine.rootContext()->setContextProperty("lsb", &lsb);
-    engine.rootContext()->setContextProperty("cmdRunner", &cmdRunner);
-    engine.rootContext()->setContextProperty("piRunner", &piRunner);
-    engine.rootContext()->setContextProperty("kmRunner", &kmRunner);
+    auto rootContext = engine.rootContext();
+
+    rootContext->setContextProperty("lsb", &lsb);
+    rootContext->setContextProperty("cmdRunner", &cmdRunner);
+    rootContext->setContextProperty("piRunner", &piRunner);
+    rootContext->setContextProperty("kmRunner", &kmRunner);
+    rootContext->setContextProperty("fileLoader", &fileLoader);
 
     QObject::connect(
         &engine,

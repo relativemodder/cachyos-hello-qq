@@ -6,11 +6,11 @@ import "./pages"
 
 Kirigami.ApplicationWindow {
     id: root
-    width: 700
-    height: 550
+    width: 797
+    height: 592
 
-    minimumWidth: 560
-    minimumHeight: 500
+    minimumWidth: 797
+    minimumHeight: 592
 
     visible: true
     title: qsTr("CachyOS Hello")
@@ -29,15 +29,23 @@ Kirigami.ApplicationWindow {
         id: kernelManagerPageComponent
         KernelManagerPage {
             onBack: root.pageStack.goBack()
+            onNext: root.pageStack.push(linksPageComponent)
         }
     }
 
     Component {
         id: tweaksPageComponent
         TweaksAndFixesPage {
-            onClose: {
-                root.pageStack.layers.pop()
-            }
+            onClose: root.pageStack.layers.pop()
+        }
+    }
+
+    Component {
+        id: linksPageComponent
+        LinksPage {
+            onBack: root.pageStack.goBack()
+            onDone: Qt.quit()
+            onTweaks: root.pageStack.layers.push(tweaksPageComponent)
         }
     }
 
@@ -51,7 +59,7 @@ Kirigami.ApplicationWindow {
 
         PageIndicator {
             currentIndex: root.pageStack.currentIndex
-            count: 3
+            count: 4
             anchors.centerIn: parent
             anchors.verticalCenterOffset: -20
         }
