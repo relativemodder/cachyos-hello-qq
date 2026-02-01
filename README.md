@@ -4,6 +4,8 @@ Welcome screen for CachyOS written in QML/C++.
 
 <img src="assets/welcome.png" />
 
+<img src="assets/tweaks.png" />
+
 ## Dependencies (Arch Linux)
 ### Runtime
 - qt6-base
