@@ -26,7 +26,8 @@ jobs:
             qt6-tools \
             kirigami \
             qqc2-desktop-style \
-            qqc2-breeze-style
+            qqc2-breeze-style \
+            rust
 
       - name: Checkout Code
         uses: actions/checkout@v4
