@@ -3,6 +3,7 @@
 #include <QQmlContext>
 #include <QQuickStyle>
 #include <QIcon>
+#include <cstdlib>
 #include "languageselectorbackend.h"
 #include "commandrunner.h"
 #include "cachyospirunner.h"
@@ -12,7 +13,15 @@
 #include "pacmanservice.h"
 #include "networkingfixservice.h"
 #include "autostartcontroller.h"
-#include <cstdlib>
+#include "installerbackend.h"
+
+static QObject* installerBackendSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    return new InstallerBackend();
+}
 
 int main(int argc, char *argv[])
 {
@@ -34,6 +43,11 @@ int main(int argc, char *argv[])
                                             "Use through NetworkingFixService");
 
     qmlRegisterType<AutostartController>("org.cachyos.autostart", 1, 0, "AutostartController");
+
+    qmlRegisterSingletonType<InstallerBackend>(
+        "org.cachyos.installer", 1, 0, "InstallerBackend",
+        installerBackendSingletonProvider
+        );
 
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
         QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));

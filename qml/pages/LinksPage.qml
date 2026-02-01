@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.cachyos.installer
 import "../components"
 
 Kirigami.Page {
@@ -11,6 +12,7 @@ Kirigami.Page {
     signal back();
     signal done();
     signal tweaks();
+    signal installer();
 
     Component {
         id: groupBoxBackground
@@ -188,8 +190,9 @@ Kirigami.Page {
                 rightPadding: 25
                 icon.name: "tools-wizard"
                 icon.height: 12
-                text: qsTr("Go to tweaks and fixes")
-                onClicked: root.tweaks()
+                text: InstallerBackend.inIso ? qsTr("Launch installer") : qsTr("Go to tweaks and fixes")
+                onClicked: InstallerBackend.inIso ? root.installer() : root.tweaks()
+                highlighted: InstallerBackend.inIso
             }
 
             Item {
@@ -211,7 +214,7 @@ Kirigami.Page {
                 icon.name: "checkmark"
                 icon.height: 12
                 text: qsTr("Done")
-                highlighted: true
+                highlighted: !InstallerBackend.inIso
                 onClicked: root.done()
             }
         }

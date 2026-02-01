@@ -43,6 +43,42 @@
     </message>
 </context>
 <context>
+    <name>InstallerBackend</name>
+    <message>
+        <location filename="../src/installerbackend.cpp" line="42"/>
+        <location filename="../src/installerbackend.cpp" line="86"/>
+        <source>Testing ISO Warning</source>
+        <translation>Предупреждение о тестовом ISO</translation>
+    </message>
+    <message>
+        <location filename="../src/installerbackend.cpp" line="43"/>
+        <location filename="../src/installerbackend.cpp" line="87"/>
+        <source>You are using a testing ISO. This version may contain bugs and is not recommended for production use.</source>
+        <translation>Вы используете тестовый ISO-образ. Эта версия может содержать ошибки и не рекомендуется для использования в производственной среде.</translation>
+    </message>
+    <message>
+        <location filename="../src/installerbackend.cpp" line="57"/>
+        <location filename="../src/installerbackend.cpp" line="145"/>
+        <source>Offline Error</source>
+        <translation>Ошибка подключения</translation>
+    </message>
+    <message>
+        <location filename="../src/installerbackend.cpp" line="58"/>
+        <source>You&apos;re offline. Can&apos;t install the system.</source>
+        <translation>Вы не подключены к сети. Невозможно установить систему.</translation>
+    </message>
+    <message>
+        <location filename="../src/installerbackend.cpp" line="94"/>
+        <source>Outdated Version Warning</source>
+        <translation>Предупреждение об устаревшей версии</translation>
+    </message>
+    <message>
+        <location filename="../src/installerbackend.cpp" line="95"/>
+        <source>You are using an outdated ISO. Download the latest one from CachyOS website.</source>
+        <translation>Вы используете устаревший ISO-образ. Загрузите последнюю версию с веб-сайта CachyOS.</translation>
+    </message>
+</context>
+<context>
     <name>KWinService</name>
     <message>
         <location filename="../src/kwinservice.cpp" line="50"/>
@@ -86,87 +122,92 @@
 <context>
     <name>LinksPage</name>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="9"/>
+        <location filename="../qml/pages/LinksPage.qml" line="10"/>
         <source>Links</source>
         <translation>Ссылки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="44"/>
+        <location filename="../qml/pages/LinksPage.qml" line="46"/>
         <source>Any questions?</source>
         <translation>Есть вопросы?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="50"/>
+        <location filename="../qml/pages/LinksPage.qml" line="52"/>
         <source>You can find the answers to your questions down here:</source>
         <translation>Вы можете найти ответы на свои вопросы здесь:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="67"/>
+        <location filename="../qml/pages/LinksPage.qml" line="69"/>
         <source>Documentation</source>
         <translation>Документация</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="78"/>
+        <location filename="../qml/pages/LinksPage.qml" line="80"/>
         <source>Read me</source>
         <translation>Прочти меня</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="83"/>
+        <location filename="../qml/pages/LinksPage.qml" line="85"/>
         <source>Release info</source>
         <translation>Информация о релизе</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="88"/>
+        <location filename="../qml/pages/LinksPage.qml" line="90"/>
         <source>Wiki</source>
         <translation>Вики</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="111"/>
+        <location filename="../qml/pages/LinksPage.qml" line="113"/>
         <source>Support</source>
         <translation>Поддержка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="122"/>
+        <location filename="../qml/pages/LinksPage.qml" line="124"/>
         <source>Forum</source>
         <translation>Форум</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="127"/>
+        <location filename="../qml/pages/LinksPage.qml" line="129"/>
         <source>Software</source>
         <translation>Программное обеспечение</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="151"/>
+        <location filename="../qml/pages/LinksPage.qml" line="153"/>
         <source>Project</source>
         <translation>Проект</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="162"/>
+        <location filename="../qml/pages/LinksPage.qml" line="164"/>
         <source>Get involved</source>
         <translation>Присоединиться</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="167"/>
+        <location filename="../qml/pages/LinksPage.qml" line="169"/>
         <source>Development</source>
         <translation>Разработка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="172"/>
+        <location filename="../qml/pages/LinksPage.qml" line="174"/>
         <source>Donate</source>
         <translation>Пожертвовать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="191"/>
+        <location filename="../qml/pages/LinksPage.qml" line="193"/>
         <source>Go to tweaks and fixes</source>
         <translation>Перейти к настройкам и исправлениям</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="204"/>
+        <location filename="../qml/pages/LinksPage.qml" line="193"/>
+        <source>Launch installer</source>
+        <translation>Запустить установщик</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/LinksPage.qml" line="207"/>
         <source>Back</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LinksPage.qml" line="213"/>
+        <location filename="../qml/pages/LinksPage.qml" line="216"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
@@ -174,45 +215,90 @@
 <context>
     <name>Main</name>
     <message>
-        <location filename="../qml/Main.qml" line="16"/>
+        <location filename="../qml/Main.qml" line="17"/>
         <source>CachyOS Hello</source>
         <translation>CachyOS Hello</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="28"/>
+        <location filename="../qml/Main.qml" line="126"/>
+        <source>Error</source>
+        <translation>Ошибка</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="29"/>
+        <source>Warning</source>
+        <translation>Предупреждение</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="30"/>
+        <source>Information</source>
+        <translation>Информация</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="82"/>
+        <source>Starting installation...</source>
+        <translation>Начало установки...</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="126"/>
+        <source>Success</source>
+        <translation type="unfinished">Успешно</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="128"/>
+        <source>Installation completed successfully</source>
+        <translation>Установка успешно завершена</translation>
+    </message>
+    <message>
+        <location filename="../qml/Main.qml" line="129"/>
+        <source>Installation failed with code: </source>
+        <translation>Установка не удалась с кодом: </translation>
     </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="10"/>
+        <location filename="../qml/pages/MainPage.qml" line="11"/>
         <source>Welcome to CachyOS!</source>
         <translation>Добро пожаловать в CachyOS!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="20"/>
         <source>Tweaks and fixes</source>
-        <translation>Настройки и исправления</translation>
+        <translation type="vanished">Настройки и исправления</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="33"/>
+        <location filename="../qml/pages/MainPage.qml" line="21"/>
+        <source>Launch installer</source>
+        <translation>Запустить установщик</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="21"/>
+        <source>Go to tweaks and fixes</source>
+        <translation type="unfinished">Перейти к настройкам и исправлениям</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="35"/>
         <source>Thank you for joining our community!</source>
         <translation>Спасибо, что присоединились к нашему сообществу!</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="39"/>
+        <location filename="../qml/pages/MainPage.qml" line="41"/>
         <source>We, the CachyOS Developers, hope that you will enjoy using CachyOS as much as we enjoy building it. Press &quot;Next&quot; to get you started with your new operating system. So enjoy the experience, and don&apos;t hesitate to send us your feedback.</source>
         <translation>Мы, разработчики CachyOS, надеемся, что вам понравится использовать CachyOS так же, как нам нравится его создавать. Нажмите &quot;Далее&quot;, чтобы начать работу с вашей новой операционной системой. Приятного использования, и не стесняйтесь отправлять нам свои отзывы.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="68"/>
+        <location filename="../qml/pages/MainPage.qml" line="70"/>
         <source>Start on boot</source>
         <translation>Запускать с системой</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="123"/>
+        <location filename="../qml/pages/MainPage.qml" line="125"/>
         <source>Quit</source>
         <translation>Выйти</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="133"/>
         <source>Next</source>
         <translation>Далее</translation>
     </message>

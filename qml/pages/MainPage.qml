@@ -4,6 +4,7 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import "../components"
 import org.cachyos.autostart
+import org.cachyos.installer
 
 Kirigami.Page {
     id: root
@@ -17,11 +18,12 @@ Kirigami.Page {
         Kirigami.Action {
             id: navigateToTweaksActions
             icon.name: "tools-wizard"
-            text: qsTr("Tweaks and fixes")
-            onTriggered: root.tweaks()
+            text: InstallerBackend.inIso ? qsTr("Launch installer") : qsTr("Go to tweaks and fixes")
+            onTriggered: InstallerBackend.inIso ? root.installer() : root.tweaks()
         }
     ]
 
+    signal installer();
     signal tweaks();
     signal next();
 

@@ -68,6 +68,7 @@ qt_add_qml_module(appCachyOsHello
         src/kwinservice.h src/kwinservice.cpp
         src/networkingfixservice.h src/networkingfixservice.cpp
         src/autostartcontroller.h src/autostartcontroller.cpp
+        SOURCES src/installerbackend.h src/installerbackend.cpp
 )
 
 target_link_libraries(appCachyOsHello
