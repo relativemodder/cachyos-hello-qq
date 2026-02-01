@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick LinguistTools Widgets Core QuickControls2 DBus)
 
-qt_standard_project_setup(REQUIRES 6.8)
+qt_standard_project_setup(REQUIRES 6.10)
 
 qt_add_executable(appCachyOsHello
     src/main.cpp

@@ -35,6 +35,10 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<AutostartController>("org.cachyos.autostart", 1, 0, "AutostartController");
 
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
+    }
+
     QQmlApplicationEngine engine;
 
     LanguageSelectorBackend lsb(&engine, &app);

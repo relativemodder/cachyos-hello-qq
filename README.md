@@ -12,6 +12,7 @@ Welcome screen for CachyOS written in QML/C++.
 - qt6-declarative
 - kirigami
 - qqc2-desktop-style
+- qqc2-breeze-style
 ### Build deps
 - base-devel
 - cmake
@@ -20,9 +21,10 @@ Welcome screen for CachyOS written in QML/C++.
 - qt6-tools
 - kirigami
 - qqc2-desktop-style
+- qqc2-breeze-style
 
 ```bash
-sudo pacman -S base-devel cmake qt6-base qt6-declarative qt6-tools kirigami qqc2-desktop-style
+sudo pacman -S base-devel cmake qt6-base qt6-declarative qt6-tools kirigami qqc2-desktop-style qqc2-breeze-style
 ```
 
 ## Qt Quick animations
@@ -30,6 +32,11 @@ sudo pacman -S base-devel cmake qt6-base qt6-declarative qt6-tools kirigami qqc2
 Unline other Qt apps, this app is uncapped from 60 FPS. 
 
 If it creates problems for you, pass `DONT_FIX_60FPS=1` environment variable to disable that workaround.
+
+
+## Theming
+
+If you want something different from Breeze, you can specify controls style by passing `QT_QUICK_CONTROLS_STYLE` environment variable.
 
 
 ## Translations
