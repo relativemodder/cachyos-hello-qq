@@ -40,6 +40,7 @@ qt_add_qml_module(appCachyOsHello
     RESOURCES
         README.md # to show in Qt Creator
         data/org.cachyos.hello.desktop
+        .github/workflows/ci.yaml
 
         pages/en/involved.html
         pages/en/readme.html
