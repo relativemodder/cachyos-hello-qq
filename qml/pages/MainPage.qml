@@ -2,10 +2,16 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import "../components"
+import org.cachyos.autostart
 
 Kirigami.Page {
     id: root
     title: qsTr("Welcome to CachyOS!")
+
+    AutostartController {
+        id: autostartController
+    }
 
     actions: [
         Kirigami.Action {
@@ -53,6 +59,26 @@ Kirigami.Page {
 
         Item {
             Layout.fillHeight: true
+        }
+
+        RowLayout {
+            WrapSwitch {
+                id: autostartSwitch
+                Layout.alignment: Qt.AlignLeft
+                text: qsTr("Start on boot")
+
+                Component.onCompleted: {
+                    checked = autostartController.isAutostart()
+                }
+
+                onToggled: {
+                    autostartController.setAutostart(checked)
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
         }
 
         RowLayout {

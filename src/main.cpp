@@ -10,6 +10,8 @@
 #include "fileloader.h"
 #include "tweakcontroller.h"
 #include "pacmanservice.h"
+#include "networkingfixservice.h"
+#include "autostartcontroller.h"
 
 int main(int argc, char *argv[])
 {
@@ -22,6 +24,10 @@ int main(int argc, char *argv[])
                                               "Use through TweakController");
     qmlRegisterUncreatableType<KWinService>("org.cachyos.tweaks", 1, 0, "KWinService",
                                             "Use through TweakController");
+    qmlRegisterUncreatableType<NetworkingFixService>("org.cachyos.tweaks", 1, 0, "NetworkingFixService",
+                                            "Use through NetworkingFixService");
+
+    qmlRegisterType<AutostartController>("org.cachyos.autostart", 1, 0, "AutostartController");
 
     QQmlApplicationEngine engine;
 

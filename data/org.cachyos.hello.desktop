@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Version=0.20
+Name=CachyOS Hello
+GenericName=System Welcome Screen
+Comment=Welcome and system configuration tool for CachyOS
+Comment[ru]=Приветствие и инструмент настройки системы CachyOS
+
+Exec=appCachyOsHello
+Icon=cachyos-hello
+Terminal=false
+
+Categories=System;Settings;Qt;
+Keywords=welcome;setup;tweaks;kernel;configuration;
+Keywords[ru]=приветствие;настройка;твики;ядро;конфигурация;
+
+StartupNotify=true
+StartupWMClass=org.cachyos.hello.desktop

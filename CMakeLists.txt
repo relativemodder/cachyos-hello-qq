@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(CachyOsHello VERSION 0.1 LANGUAGES CXX)
+project(CachyOsHello VERSION 0.20 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -32,12 +32,15 @@ qt_add_qml_module(appCachyOsHello
         qml/components/ReadmeDialog.qml
         qml/components/ReleaseInfoDialog.qml
         qml/components/GetInvolvedDialog.qml
+        qml/components/FixGroupBox.qml
     RESOURCES
         img/icon.png
         img/cachyos-pi.png
 
     RESOURCES
         README.md # to show in Qt Creator
+        data/org.cachyos.hello.desktop
+
         pages/en/involved.html
         pages/en/readme.html
         pages/en/release.html
@@ -58,7 +61,7 @@ qt_add_qml_module(appCachyOsHello
         src/pacmanservice.h src/pacmanservice.cpp
         src/kwinservice.h src/kwinservice.cpp
         src/networkingfixservice.h src/networkingfixservice.cpp
-        QML_FILES qml/components/FixGroupBox.qml
+        src/autostartcontroller.h src/autostartcontroller.cpp
 )
 
 target_link_libraries(appCachyOsHello
@@ -72,4 +75,13 @@ install(TARGETS appCachyOsHello
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+install(FILES data/org.cachyos.hello.desktop
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/applications
+)
+
+install(FILES img/icon.png
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/256x256/apps
+    RENAME cachyos-hello.png
 )
