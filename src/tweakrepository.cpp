@@ -29,7 +29,7 @@ void TweakRepository::initializeTweaks()
             "Userspace out-of-memory killer",
             TweakDefinition::SystemService,
             {"systemd-oomd.service"},
-            "systemd-oomd"
+            "systemd"
         }},
 
         {"bpftune", {
