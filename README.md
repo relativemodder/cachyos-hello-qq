@@ -23,9 +23,10 @@ Welcome screen for CachyOS written in QML/C++.
 - qqc2-desktop-style
 - qqc2-breeze-style
 - rust
+- pciutils
 
 ```bash
-sudo pacman -S base-devel cmake qt6-base qt6-declarative qt6-tools kirigami qqc2-desktop-style qqc2-breeze-style rust
+sudo pacman -S base-devel cmake qt6-base qt6-declarative qt6-tools kirigami qqc2-desktop-style qqc2-breeze-style rust pciutils
 ```
 
 ## Qt Quick animations

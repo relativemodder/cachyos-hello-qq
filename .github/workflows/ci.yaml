@@ -27,7 +27,8 @@ jobs:
             kirigami \
             qqc2-desktop-style \
             qqc2-breeze-style \
-            rust
+            rust \
+            pciutils
 
       - name: Checkout Code
         uses: actions/checkout@v4
