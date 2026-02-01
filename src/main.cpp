@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
+#include <QIcon>
 #include "languageselectorbackend.h"
 #include "commandrunner.h"
 #include "cachyospirunner.h"
@@ -13,6 +14,8 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+    app.setWindowIcon(QIcon(":/qt/qml/CachyOsHello/img/icon.png"));
+    app.setDesktopFileName("org.cachyos.hello.desktop");
 
     qmlRegisterType<TweakController>("org.cachyos.tweaks", 1, 0, "TweakController");
     qmlRegisterUncreatableType<PacmanService>("org.cachyos.tweaks", 1, 0, "PacmanService",
