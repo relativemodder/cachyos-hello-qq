@@ -174,6 +174,17 @@ Kirigami.Page {
                             text: qsTr("Donate")
                             icon.name: "donate"
                             onTriggered: Qt.openUrlExternally("https://www.patreon.com/CachyOS")
+                        },
+                        Kirigami.Action {
+                            text: "Reddit"
+                            icon.source: "qrc:/qt/qml/CachyOsHello/img/reddit.svg"
+                            icon.color: "white"
+                            onTriggered: Qt.openUrlExternally("https://www.reddit.com/r/cachyos/")
+                        },
+                        Kirigami.Action {
+                            text: "Discord"
+                            icon.name: "qrc:/qt/qml/CachyOsHello/img/discord.svg"
+                            onTriggered: Qt.openUrlExternally("https://discord.gg/cachyos-862292009423470592")
                         }
                     ]
                 }

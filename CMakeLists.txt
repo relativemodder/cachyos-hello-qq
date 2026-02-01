@@ -40,6 +40,8 @@ qt_add_qml_module(appCachyOsHello
     RESOURCES # actually used by the program
         img/icon.png
         img/cachyos-pi.png
+        img/discord.svg
+        img/reddit.svg
         data/org.cachyos.hello.desktop
 
     RESOURCES # pages
@@ -68,7 +70,7 @@ qt_add_qml_module(appCachyOsHello
         src/kwinservice.h src/kwinservice.cpp
         src/networkingfixservice.h src/networkingfixservice.cpp
         src/autostartcontroller.h src/autostartcontroller.cpp
-        SOURCES src/installerbackend.h src/installerbackend.cpp
+        src/installerbackend.h src/installerbackend.cpp
 )
 
 target_link_libraries(appCachyOsHello
