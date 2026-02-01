@@ -33,21 +33,23 @@ qt_add_qml_module(appCachyOsHello
         qml/components/ReleaseInfoDialog.qml
         qml/components/GetInvolvedDialog.qml
         qml/components/FixGroupBox.qml
-    RESOURCES
+
+    RESOURCES # actually used by the program
         img/icon.png
         img/cachyos-pi.png
-
-    RESOURCES
-        README.md # to show in Qt Creator
         data/org.cachyos.hello.desktop
-        .github/workflows/ci.yaml
 
+    RESOURCES # pages
         pages/en/involved.html
         pages/en/readme.html
         pages/en/release.html
         pages/ru/involved.html
         pages/ru/readme.html
         pages/ru/release.html
+
+    RESOURCES  # to show in Qt Creator
+        README.md
+        .github/workflows/ci.yaml
 
     SOURCES src/languageselectorbackend.h src/languageselectorbackend.cpp
         src/commandrunner.h src/commandrunner.cpp

@@ -12,9 +12,15 @@
 #include "pacmanservice.h"
 #include "networkingfixservice.h"
 #include "autostartcontroller.h"
+#include <cstdlib>
 
 int main(int argc, char *argv[])
 {
+    if (getenv("DONT_FIX_60FPS") == NULL) {
+        setenv("QSG_USE_SIMPLE_ANIMATION_DRIVER", "1", 1);
+        setenv("QSG_RENDER_LOOP", "threaded", 1);
+    }
+
     QGuiApplication app(argc, argv);
     app.setWindowIcon(QIcon(":/qt/qml/CachyOsHello/img/icon.png"));
     app.setDesktopFileName("org.cachyos.hello.desktop");

@@ -25,6 +25,12 @@ Welcome screen for CachyOS written in QML/C++.
 sudo pacman -S base-devel cmake qt6-base qt6-declarative qt6-tools kirigami qqc2-desktop-style
 ```
 
+## Qt Quick animations
+
+Unline other Qt apps, this app is uncapped from 60 FPS. 
+
+If it creates problems for you, pass `DONT_FIX_60FPS=1` environment variable to disable that workaround.
+
 
 ## Translations
 
