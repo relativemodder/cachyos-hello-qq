@@ -47,6 +47,7 @@ private:
     QStringList m_termOrder;
     QScopedPointer<QProcess> m_process;
     QScopedPointer<QTemporaryFile> m_tempFile;
+    QScopedPointer<QTemporaryFile> m_exitCodeFile;
 };
 
 #endif // TERMINALLAUNCHER_H

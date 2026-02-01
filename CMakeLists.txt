@@ -41,6 +41,9 @@ qt_add_qml_module(appCachyOsHello
         pages/en/involved.html
         pages/en/readme.html
         pages/en/release.html
+        pages/ru/involved.html
+        pages/ru/readme.html
+        pages/ru/release.html
 
     SOURCES src/languageselectorbackend.h src/languageselectorbackend.cpp
         src/commandrunner.h src/commandrunner.cpp
@@ -48,6 +51,14 @@ qt_add_qml_module(appCachyOsHello
         src/cachyoskmrunner.h src/cachyoskmrunner.cpp
         src/fileloader.h src/fileloader.cpp
         src/terminallauncher.h src/terminallauncher.cpp
+        src/tweakdefinition.h
+        src/tweakrepository.h src/tweakrepository.cpp
+        src/systemdservice.h src/systemdservice.cpp
+        src/tweakcontroller.h src/tweakcontroller.cpp
+        src/pacmanservice.h src/pacmanservice.cpp
+        src/kwinservice.h src/kwinservice.cpp
+        src/networkingfixservice.h src/networkingfixservice.cpp
+        QML_FILES qml/components/FixGroupBox.qml
 )
 
 target_link_libraries(appCachyOsHello

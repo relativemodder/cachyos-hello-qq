@@ -29,9 +29,9 @@ void LanguageSelectorBackend::loadInitialLanguage() {
 }
 
 void LanguageSelectorBackend::switchLanguage(const QString &lang) {
-    if (m_currentLanguage == lang) {
-        return; // language is installed already
-    }
+    // if (m_currentLanguage == lang) {
+    //     return; // language is installed already
+    // }
 
     qApp->removeTranslator(&m_translator);
 
@@ -44,6 +44,10 @@ void LanguageSelectorBackend::switchLanguage(const QString &lang) {
     } else {
         if (lang != "en") {
             qWarning() << "Failed to load translation for" << lang;
+        }
+        else {
+            m_currentLanguage = locale.name();
+            emit currentLanguageChanged();
         }
         qApp->installTranslator(&m_translator);
     }

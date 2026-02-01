@@ -7,10 +7,18 @@
 #include "cachyospirunner.h"
 #include "cachyoskmrunner.h"
 #include "fileloader.h"
+#include "tweakcontroller.h"
+#include "pacmanservice.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+
+    qmlRegisterType<TweakController>("org.cachyos.tweaks", 1, 0, "TweakController");
+    qmlRegisterUncreatableType<PacmanService>("org.cachyos.tweaks", 1, 0, "PacmanService",
+                                              "Use through TweakController");
+    qmlRegisterUncreatableType<KWinService>("org.cachyos.tweaks", 1, 0, "KWinService",
+                                            "Use through TweakController");
 
     QQmlApplicationEngine engine;
 

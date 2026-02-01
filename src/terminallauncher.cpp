@@ -20,9 +20,9 @@ void TerminalLauncher::launch(const QString& command) {
     // find available terminal
     QString terminal = findTerminal();
     if (terminal.isEmpty()) {
-        sendNotification("No terminal installed",
-                         "Could not find a terminal emulator. Please install one.");
-        emit failed(1, "No terminal emulator found");
+        sendNotification(tr("No terminal installed"),
+                         tr("Could not find a terminal emulator. Please install one."));
+        emit failed(1, tr("No terminal emulator found"));
         return;
     }
 
@@ -31,11 +31,28 @@ void TerminalLauncher::launch(const QString& command) {
     m_tempFile->setAutoRemove(false);
 
     if (!m_tempFile->open()) {
-        emit failed(1, "Failed to create temporary file");
+        emit failed(1, tr("Failed to create temporary file"));
         return;
     }
 
-    QString scriptContent = command;
+    m_exitCodeFile.reset(new QTemporaryFile());
+    m_exitCodeFile->setAutoRemove(false);
+    if (!m_exitCodeFile->open()) {
+        emit failed(1, tr("Failed to create exit code file"));
+        return;
+    }
+    QString exitCodePath = m_exitCodeFile->fileName();
+    m_exitCodeFile->close();
+
+    QString scriptContent = QString(
+        "%1\n"
+        "EXIT_CODE=$?\n"
+        "echo $EXIT_CODE > %2\n"
+        "echo ''\n"
+        "echo 'Press Enter to close...'\n"
+        "read -r\n"
+        "exit $EXIT_CODE\n"
+    ).arg(command, exitCodePath);
 
     // special handling for kgx
     if (terminal == "kgx") {
@@ -56,29 +73,43 @@ void TerminalLauncher::onProcessStarted() {
 }
 
 void TerminalLauncher::onProcessFinished(int exitCode, QProcess::ExitStatus exitStatus) {
+    int actualExitCode = 0;
+
+    if (m_exitCodeFile && QFile::exists(m_exitCodeFile->fileName())) {
+        QFile file(m_exitCodeFile->fileName());
+        if (file.open(QIODevice::ReadOnly)) {
+            QString exitCodeStr = file.readAll().trimmed();
+            actualExitCode = exitCodeStr.toInt();
+            file.close();
+        }
+        QFile::remove(m_exitCodeFile->fileName());
+    }
+
     cleanup();
 
     if (exitStatus == QProcess::CrashExit) {
-        emit failed(2, "Process crashed");
+        emit failed(2, tr("Process crashed"));
     } else {
-        emit finished(exitCode);
+        emit finished(actualExitCode);
     }
+
+    m_exitCodeFile.reset();
 }
 
 void TerminalLauncher::onProcessError(QProcess::ProcessError error) {
     QString errorMsg;
     switch (error) {
     case QProcess::FailedToStart:
-        errorMsg = "Failed to start terminal";
+        errorMsg = tr("Failed to start terminal");
         break;
     case QProcess::Crashed:
-        errorMsg = "Terminal crashed";
+        errorMsg = tr("Terminal crashed");
         break;
     case QProcess::Timedout:
-        errorMsg = "Process timeout";
+        errorMsg = tr("Process timeout");
         break;
     default:
-        errorMsg = "Unknown error";
+        errorMsg = tr("Unknown error");
     }
 
     cleanup();
