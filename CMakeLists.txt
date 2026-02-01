@@ -8,6 +8,15 @@ find_package(Qt6 REQUIRED COMPONENTS Quick LinguistTools Widgets Core QuickContr
 find_package(QQC2BreezeStyle CONFIG REQUIRED)
 find_package(KF6QQC2DesktopStyle CONFIG REQUIRED)
 
+include(FetchContent)
+FetchContent_Declare(
+    Corrosion
+    GIT_REPOSITORY https://github.com/corrosion-rs/corrosion.git
+    GIT_TAG v0.5
+)
+FetchContent_MakeAvailable(Corrosion)
+
+corrosion_import_crate(MANIFEST_PATH ${CMAKE_SOURCE_DIR}/chwd-wrapper/Cargo.toml)
 
 qt_standard_project_setup(REQUIRES 6.10)
 
@@ -74,7 +83,7 @@ qt_add_qml_module(appCachyOsHello
 )
 
 target_link_libraries(appCachyOsHello
-    PRIVATE Qt6::Quick Qt6::Widgets Qt6::Core Qt6::QuickControls2 Qt6::DBus
+    PRIVATE Qt6::Quick Qt6::Widgets Qt6::Core Qt6::QuickControls2 Qt6::DBus chwd_wrapper pci
 )
 
 target_include_directories(appCachyOsHello PUBLIC src)

@@ -9,6 +9,10 @@
 #include <QThread>
 #include <QDebug>
 
+extern "C" {
+int check_handheld_support();
+}
+
 InstallerBackend::InstallerBackend(QObject* parent)
     : QObject(parent)
     , m_networkManager(new QNetworkAccessManager(this))
@@ -103,8 +107,15 @@ bool InstallerBackend::editionCompatCheck(const QString& message) {
     QString editionTag = readFileToString("/etc/edition-tag", "desktop");
 
     if (editionTag == "handheld") {
-        // it requires chwd, let's just true for now
-        qWarning() << "Handheld edition check not fully implemented";
+        int result = check_handheld_support();
+
+        if (result != 0) {
+            emit showMessage(static_cast<int>(MessageType::Warning),
+                tr("Handheld is not supported"),
+                tr("You're trying to install CachyOS on unsupported hardware.")
+            );
+            return false;
+        }
     }
 
     return true;

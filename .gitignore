@@ -3,6 +3,7 @@
 .qtcreator
 build/
 .cache
+**/target
 *~
 *.autosave
 *.a

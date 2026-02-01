@@ -1,0 +1,10 @@
+[package]
+name = "chwd-wrapper"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+chwd = { git = "https://github.com/CachyOS/chwd", rev = "595312b31e6dd355c9a8fcd09acde24b7f9c3e3b", version = "1.16.1" }
