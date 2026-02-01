@@ -18,6 +18,9 @@ jobs:
           pacman -Syu --noconfirm --needed \
             git \
             cmake \
+            ninja \
+            mold \
+            ccache \
             qt6-base \
             qt6-declarative \
             qt6-tools \
@@ -27,11 +30,26 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup ccache
+        uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: ccache-${{ github.sha }}
+          restore-keys: |
+            ccache-
+
       - name: Configure CMake
         run: |
-          cmake -B build \
+          cmake -B build -G Ninja \
             -DCMAKE_BUILD_TYPE=Release \
-            -DCMAKE_INSTALL_PREFIX=/usr
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DCMAKE_C_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+            -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold"
 
       - name: Build
-        run: cmake --build build --parallel $(nproc)
+        run: |
+          ccache -z
+          cmake --build build --parallel $(nproc)
+          ccache -s
